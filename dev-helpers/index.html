@@ -43,7 +43,7 @@
       window["SwaggerUIStandalonePreset"] = window["swagger-ui-standalone-preset"]
       // Build a system
       const ui = SwaggerUIBundle({
-        url: "http://petstore.swagger.io/v2/swagger.json",
+        url: window.location.protocol + "//" + window.location.host + "/swagger.yml",
         dom_id: '#swagger-ui',
         presets: [
           SwaggerUIBundle.presets.apis,
@@ -52,7 +52,8 @@
         plugins: [
           SwaggerUIBundle.plugins.DownloadUrl
         ],
-        layout: "StandaloneLayout"
+        layout: "StandaloneLayout",
+        filter: true
       })
 
       window.ui = ui
