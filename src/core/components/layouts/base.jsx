@@ -84,10 +84,13 @@ export default class BaseLayout extends React.Component {
             <Errors/>
             <Row className="information-container">
               <Col mobile={12}>
-                { info.count() ? (
-                  <Info info={ info } url={ url } host={ host } basePath={ basePath } externalDocs={externalDocs} getComponent={getComponent}/>
-                ) : null }
+                <img src={'/assets/gateway.png'}/>
+                {/*{ info.count() ? (*/}
+                  {/*<Info info={ info } url={ url } host={ host } basePath={ basePath } externalDocs={externalDocs} getComponent={getComponent}/>*/}
+                {/*) : null }*/}
+
               </Col>
+
             </Row>
             { schemes && schemes.size || securityDefinitions ? (
               <div className="scheme-container">
