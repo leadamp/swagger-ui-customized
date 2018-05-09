@@ -25,6 +25,8 @@ export default class StandaloneLayout extends React.Component {
 
     const Topbar = getComponent("Topbar", true)
     const BaseLayout = getComponent("BaseLayout", true)
+    const Footer = getComponent("Footer", true);
+    console.log("footer", Footer);
     const OnlineValidatorBadge = getComponent("onlineValidatorBadge", true)
 
     const loadingStatus = specSelectors.loadingStatus()
@@ -34,7 +36,7 @@ export default class StandaloneLayout extends React.Component {
     return (
 
       <Container className='swagger-ui'>
-        { Topbar ? <Topbar /> : null }
+        {/*{ Topbar ? <Topbar /> : null }*/}
         { loadingStatus === "loading" &&
           <div className="info">
             <div className="loading-container">
@@ -64,6 +66,7 @@ export default class StandaloneLayout extends React.Component {
             <OnlineValidatorBadge />
           </Col>
         </Row>
+        { Footer ? <Footer /> : null }
       </Container>
     )
   }
